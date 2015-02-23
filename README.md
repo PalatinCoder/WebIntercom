@@ -5,7 +5,7 @@ FOR LAN USE ONLY!
 
 Install:
 
-1. copy the directory to your wwwroot
+1. copy the directory to your wwwroot (e.g. /var/wwwroot/WebIntercom/index.php)
 
 Running Server :
 
