@@ -1,6 +1,8 @@
 # WebIntercom
 text based intercom system
 
+FOR LAN USE ONLY!
+
 Running Server :
 
 1. Change host address in index.php and server.php
