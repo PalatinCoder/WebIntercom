@@ -1,7 +1,7 @@
-# P2PWebChat
-Simple P2P Chat Web App
+# WebIntercom
+text based intercom system
 
-credit to Saran Chamling over at sanwebe.com
+FOR LAN USE ONLY!
 
 Running Server :
 
@@ -13,7 +13,5 @@ Running Server :
 	php -q c:\path\server.php
 
 4. Using browser, navigate to index.php location to open chat page, have fun!
-
-
 
 http://www.saaraan.com
