@@ -69,7 +69,7 @@ $(document).ready(function(){
             $('#message_box').append("<div class=\"system_msg\">Connected!</div>"); //notify user
         }
         
-        $('#message_form').submit(function(event){ //use clicks message send button	
+        $('#send-btn').click(function(event){ //use clicks message send button	
             var mymessage = $('#message').val(); //get message text
             var myname = $('#name').val(); //get user name
 
@@ -90,9 +90,12 @@ $(document).ready(function(){
             };
             //convert and send data to server
             websocket.send(JSON.stringify(msg));
-            
-            event.preventDefault();
-            return false;
+        });
+        
+        $('#message').keypress(function(event) {
+            if (event.which == 13) {
+                $('#send-btn').click();
+            }
         });
 
         //#### Message received from server?
@@ -106,6 +109,7 @@ $(document).ready(function(){
             if(type == 'usermsg') 
             {
                 $('#message_box').append("<div><span class=\"user_name\" style=\"color:#"+ucolor+"\">"+uname+"</span> : <span class=\"user_message\">"+umsg+"</span></div>");
+                $('#message_box').scrollTop($('#message_box').height());
             }
             if(type == 'system')
             {
@@ -131,10 +135,8 @@ $(document).ready(function(){
     </div>
     <div class="message_box" id="message_box"></div>
     <div class="panel">
-        <form id="message_form" autocomplete="off">
-            <input type="text" name="message" id="message" placeholder="Nachricht" maxlength="80" style="width:60%" autocomplete="off" />
-            <input type="submit" id="send-btn" value="Senden"></input>
-        </form>
+        <input type="text" name="message" id="message" placeholder="Nachricht" maxlength="80" style="width:60%" autocomplete="off" />
+        <input type="submit" id="send-btn" value="Senden"></input>
     </div>
 </div>
 
