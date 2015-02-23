@@ -16,4 +16,9 @@ Running Server :
 
 3. Using browser, navigate to index.php location to open chat page, have fun!
 
+
+Credits:
+
+Credit to Saran Chamling at sanwebe.com, great work!
+
 http://www.saaraan.com
